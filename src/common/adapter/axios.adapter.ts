@@ -8,7 +8,6 @@ export class AxiosAdapter implements HttpAdapter {
 
   async get<T>(url: string): Promise<T> {
     try {
-      console.log(url);
       const { data } = await this.axios.get<T, any>(url);
       return data;
     } catch (error) {
